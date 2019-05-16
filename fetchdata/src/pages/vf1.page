@@ -1,0 +1,82 @@
+<apex:page standardController="Emplyee_Form__c" showHeader="false" sidebar="false">
+    <!-- Define Tab panel .css styles -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+.tabs {
+  list-style: none;
+  width: 200px;
+  float: left
+}
+
+.tabs a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  background: #fff;
+  color: #000;   
+  border-bottom: 1px solid #ccc;
+}
+
+.tabContent {
+  margin-left: 200px;
+  min-height: 300px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.tabs a.active {
+  background: rgba(0,0,0,0.2);
+}
+.tabContent .tabBox {
+  display: none
+}
+.tabContent .activeTab {
+  display: block
+}
+</style>
+ <script>
+  if(jQuery)
+jQuery.noConflict();
+
+jQuery(document).ready(function(){
+  jQuery('.tabs a').click(function(){
+    var tabId = jQuery(this).attr('href');
+    jQuery('.tabs a').removeClass('active');
+    jQuery(this).addClass('active');
+    jQuery('.tabContent .tabBox').removeClass('activeTab');
+    jQuery(tabId).addClass('activeTab')
+  });
+});
+    </script>
+    <style>
+    .activeTab {background-color: #236FBD; color:white; background-image:none}
+    .inactiveTab { background-color: lightgrey; color:black; background-image:none}
+    </style>
+    
+            
+    <!-- Create Tab panel -->
+    <apex:tabPanel switchType="client" selectedTab="name1" id="AccountTabPanel"
+        tabClass="activeTab" inactiveTabClass="inactiveTab">
+        <apex:tab label="One" name="name1" id="tabOne">
+            <ul class="tabs" >
+  <li><a class="active" href="#tab1">Tab One</a></li>
+  <li><a href="#tab2">Tab Two</a></li>
+  <li><a href="#tab3">Tab Three</a></li>
+  <li><a href="#tab4">Tab Four</a></li>
+</ul>  
+<div class="tabContent">
+  <div class="tabBox activeTab" id="tab1" ></div>
+  <div class="tabBox" id="tab2">Tab Two</div>
+  <div class="tabBox" id="tab3">Tab Three</div>
+  <div class="tabBox" id="tab4">Tab Four</div>
+</div>
+        
+        </apex:tab>
+        <apex:tab label="Two" name="name2" id="tabTwo">content for tab two</apex:tab>
+        <apex:tab label="Three" name="name3" id="tabThree">content for tab three</apex:tab>
+    </apex:tabPanel>
+</apex:page>

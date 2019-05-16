@@ -1,0 +1,62 @@
+<apex:page standardController="Internal_Risk_Details__c" extensions="newtdattestion" sidebar="false">
+    <apex:form >
+    <apex:pageBlock >
+    <apex:pageBlockSection columns="1" title="TD AKS Checklist" collapsible="false"/>
+                    <html>
+                    <head>
+                    <title></title>
+                    </head>
+                    <body>
+                        <div>
+                            <p>venkat new attestation data</p>
+                        </div></body>
+                        <br></br>
+                    </html>
+                    
+                    <Table border="1" STYLE="border: 1px solid gray; border-collapse: collapse; border-spacing: 10pt 5pt" class="AItable">
+                        <!--  <tr STYLE="border-bottom: 1px solid gray;">
+                                <td colspan="3" style="background-color: #1797C0; font-weight: bold; color:#FFFFFF; text-align:center; vertical-align:middle; padding-left: 8px">AKS Checklist</td>
+                        </tr> -->
+                        <tr STYLE="border-bottom: 1px solid gray;">
+                            <th class="head_1">#</th>
+                            <th class="head_2">Requirement</th>
+                            <th class="head_3">Requirement Met?</th>
+                            <!--<th class="head_4">N/A</th>-->
+                        </tr>
+                        <tr class="row_1">
+                            <td class="col_1" style="vertical-align:middle">1</td>
+                            <td class="col_2" style="vertical-align:middle">venkat</td>
+                            <td class="col_3" style="vertical-align:middle">
+                                <apex:inputField value="{!Internal_Risk_Details__c.td1__c}" label=""/>
+                            </td>
+                           
+                        </tr>
+                        <tr class="row_1">
+                            <td class="col_1" style="vertical-align:middle">2</td>
+                            <td class="col_2" style="vertical-align:middle">ambati</td>
+                            <td class="col_3" style="vertical-align:middle">
+                                <apex:inputField value="{!Internal_Risk_Details__c.td2__c}" label=""/>
+                            </td>
+                          
+                        </tr>
+                        <tr class="row_1">
+                            <td class="col_1" style="vertical-align:middle">3</td>
+                            <td class="col_2" style="vertical-align:middle">reddy</td>
+                            <td class="col_3" style="vertical-align:middle">
+                                <apex:inputField value="{!Internal_Risk_Details__c.td1__c}" label=""/>
+                            </td>
+                            <!--<td class="col_3" style="vertical-align:middle">
+                                <apex:outputField value="{!Eagle_JV_Legal_AKS_Review__c.N_A_Question_3_1__c}" label=""/>
+                            </td>-->
+                        </tr>
+                                                             
+                        
+                    </Table>
+                        
+               
+                     <apex:pageBlockButtons >
+                         <apex:commandButton value="Save" action="{!saveRecord}"/>
+                     </apex:pageBlockButtons>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

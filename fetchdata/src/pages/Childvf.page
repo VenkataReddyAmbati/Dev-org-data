@@ -1,0 +1,18 @@
+<apex:page standardController="childobject__c" extensions="Childvfclass">
+    <apex:form >
+        <apex:pageBlock title="Child Sumati details ">
+            <apex:pageBlockSection >
+                <apex:inputField value="{!childobject__c.name}"/>
+               <apex:inputField value="{!childobject__c.Childlocation__c}"/>
+                 <apex:inputField value="{!childobject__c.Childsumati__c}"/>
+                 <apex:inputField value="{!childobject__c.sumati__c}"/>
+                
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton action="{!submit12}" value="Submit" />
+                 <apex:commandButton action="{!cancelpage}" value="cancel"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

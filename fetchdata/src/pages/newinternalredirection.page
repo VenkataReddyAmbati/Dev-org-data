@@ -1,0 +1,2 @@
+<apex:page Controller="newinternalcontroller" action="{!flowRedirection}" sidebar="false">
+</apex:page>
