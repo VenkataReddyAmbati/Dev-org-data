@@ -1,0 +1,18 @@
+<apex:page controller="Fieldsetsclass">
+    <apex:form >
+    <apex:repeat value="{!lstAccount}" var="acc"> 
+ <table width="100%">
+   <apex:repeat value="{!$ObjectType.Account.FieldSets.Account_FieldSet}" var="fieldSet"> 
+     <tr> 
+      <td>
+        {!fieldSet.Label}
+      </td>   
+      <td>
+       <apex:inputField value="{!acc[fieldSet]}"/>
+      </td>
+      </tr>   
+       </apex:repeat>
+      </table>
+</apex:repeat>
+        </apex:form>
+</apex:page>

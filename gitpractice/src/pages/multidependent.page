@@ -1,0 +1,61 @@
+<apex:page controller="multiDependentcontroller" >
+    <apex:form >
+    <apex:pageBlock >
+  <apex:pageBlockSection columns="1" title="Hierarchy selection By Subregion">
+        <apex:pageblockSectionItem >
+          <apex:outputLabel value="Select type of Country Hierarchy selection method" />
+          <apex:selectList value="{!selectionmethod}" size="1" id="selectionmethod">
+            <apex:selectOptions value="{!selectionmethods}"/>
+              <apex:actionSupport event="onchange"  action="{!multipick}" rerender="region,subregion"/>
+          </apex:selectList>
+        </apex:pageblockSectionItem>
+        </apex:pageBlockSection> 
+         <apex:pageBlockSection title="Hierarchy selection by subregion" id="region">
+          <apex:pageblockSectionItem id="features">
+              <apex:panelGrid columns="4" id="abcd">
+                  <apex:outputLabel value="Regions:"/>
+            		<apex:selectList id="sel1" value="{!leftselectedregion}" multiselect="true" style="width:100px" size="5">
+                		<apex:selectOptions value="{!unselectedvaluesregion}" />
+            		</apex:selectList>
+                <apex:panelGroup >
+                    <br/>
+                    <apex:image value="{!$Resource.multiselected}">
+                        <apex:actionSupport event="onclick" action="{!selectclickregion}" reRender="abcd,abcd2" />
+                    </apex:image>
+                    <br/><br/>
+                    <apex:image value="{!$Resource.multiunselected}">
+                        <apex:actionSupport event="onclick" action="{!unselectclickregion}" reRender="abcd,abcd2"/>
+                    </apex:image>
+                </apex:panelGroup>
+            <apex:selectList id="sel2" value="{!rightselectedregion}" multiselect="true" style="width:100px" size="5">
+                <apex:selectOptions value="{!SelectedValuesregion}" />
+            </apex:selectList>
+              </apex:panelGrid>
+        </apex:pageblockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="Selecting subregions" id="subregion" >
+          <apex:pageblockSectionItem id="Childfeatures">
+              <apex:panelGrid columns="4" id="abcd2">
+                  <apex:outputLabel value="SubRegions:"/>
+            		<apex:selectList id="sel1" value="{!leftselectedsubregion}" multiselect="true" style="width:100px" size="5">
+                		<apex:selectOptions value="{!unselectedvaluessubregion}" />
+            		</apex:selectList>
+                <apex:panelGroup >
+                    <br/>
+                    <apex:image value="{!$Resource.multiselected}">
+                        <apex:actionSupport event="onclick" action="{!selectclicksubregion}" reRender="abcd2"/>
+                    </apex:image>
+                    <br/><br/>
+                    <apex:image value="{!$Resource.multiunselected}">
+                        <apex:actionSupport event="onclick" action="{!unselectclicksubregion}"  reRender="abcd2"/>
+                    </apex:image>
+                </apex:panelGroup>
+            <apex:selectList id="sel2" value="{!rightselectedsubregion}" multiselect="true" style="width:100px" size="5">
+                <apex:selectOptions value="{!SelectedValuessubregion}" />
+            </apex:selectList>
+        </apex:panelGrid>
+          </apex:pageblockSectionItem>
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+        </apex:form>
+</apex:page>

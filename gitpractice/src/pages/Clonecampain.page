@@ -1,0 +1,6 @@
+<apex:page controller="Attachmentfile" >
+    <apex:form > 
+        <apex:inputFile value="{!file}" filename="{!resume}"/>
+        <apex:commandButton value="Add attachment"  action="{!saveattachment}" />
+    </apex:form>
+</apex:page>

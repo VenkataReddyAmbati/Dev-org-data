@@ -1,0 +1,10 @@
+<apex:page controller="vf1">
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable title="account records" value="{!acc}" var="a">
+                <apex:column value="{!a.id}"/>
+                <apex:column value="{!a.name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
