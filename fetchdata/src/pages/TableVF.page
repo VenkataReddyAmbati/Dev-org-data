@@ -1,5 +1,0 @@
-<apex:page renderAs="PDF">
-    <apex:form >
-<img id="theImage" src="https://dev-edwords-dev-ed--trailappreddy.ap5.visual.force.com/apex/dataVF?core.apexpages.request.devconsole=1" alt="Description of image here"/>
-   </apex:form>
-</apex:page>

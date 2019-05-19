@@ -1,4 +1,4 @@
-trigger SBIArrangement on TrailAppReddy__SBI_Arrangements__c (after insert, after update, after delete, after undelete) {
+trigger SBIArrangement on TrailAppReddy__SBI_Arrangements__c (after insert, after update, after delete) {
     
     map<id,list<TrailAppReddy__SBI_Arrangements__c>> lis=new map<id,list<TrailAppReddy__SBI_Arrangements__c>>();
     

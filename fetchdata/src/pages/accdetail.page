@@ -1,3 +1,0 @@
-<apex:page standardController="Venkat__c" extensions="accdetailexte" action="{!testdetails}" >
-      <apex:include pageName="accdet" rendered="{!egg}"/>
-</apex:page>

@@ -1,5 +1,0 @@
-<apex:page standardController="SBI_Arrangements__c" 
-     extensions="CloneButtonVFController"
-     action="{!cloneOpportunity}">
-     <apex:pageMessages />
-</apex:page>

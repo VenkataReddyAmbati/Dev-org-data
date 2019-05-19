@@ -1,7 +1,0 @@
-<apex:page controller="oauthentication">
-    <apex:form >
-        <apex:commandButton value="code" action="{!code}"/>
-        
-        
-    </apex:form>
-</apex:page>
